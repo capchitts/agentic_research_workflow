@@ -6,6 +6,7 @@ from typing import Optional
 from langgraph.types import Send
 from jinja2 import Template
 
+
 current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.abspath(os.path.join(current_dir, "../../"))
 sys.path.append(project_root)
@@ -364,7 +365,7 @@ if __name__ == "__main__":
         reporter = AutonomousReportGenerator(llm)
         graph = reporter.build_graph()
 
-        topic = "Impact of LLMs over the Future of Jobs?"
+        topic = "Gold forecast over next 6 months?"
         thread = {"configurable": {"thread_id": "1"}}
         reporter.logger.info("Starting report generation pipeline", topic=topic)
 
